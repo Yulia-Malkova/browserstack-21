@@ -35,7 +35,7 @@ public class AndroidTests extends TestBase {
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Paris");
         });
         step("Click on the first article", () ->
-                $$(id("org.wikipedia.alpha:id/search_container")).first().click());
+                $$(id("org.wikipedia.alpha:id/page_list_item_container")).first().click());
         step("Check error message", () ->
                 $(id("org.wikipedia.alpha:id/view_wiki_error_text")).shouldHave(Condition.text("An error occurred")));
     }
